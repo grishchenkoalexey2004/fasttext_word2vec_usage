@@ -16,3 +16,4 @@
 
 ## Ссылки
 1. Ссылка на фаил с векторами - https://fasttext.cc/docs/en/english-vectors.html
+2. Ссылка на wordsim датасеты - http://alfonseca.org/eng/research/wordsim353.html
