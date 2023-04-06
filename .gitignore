@@ -1,3 +1,2 @@
-crawl-300d-2M.vec
-wordsim_similarity_goldstandard.txt
-wordsim_relatedness_goldstandard.txt
+crawl-300d-2M-subword.vec
+
