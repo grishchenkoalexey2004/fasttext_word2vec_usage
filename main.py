@@ -81,3 +81,11 @@ result2 = calc_spearman(wsim_sim_pairs) #spearman correlation betw rel values fr
 print("spearman correlation betw rel values from wsim_relatedness and cosine rel values : {}".format(result1))
 print("spearman correlation betw rel values from wsim_similarity and cosine rel values : {}".format(result2))
 
+#output of results into text file
+with open("results_relatedness.txt","w") as outfile:
+    for elem in wsim_rel_pairs:
+        outfile.write(elem[0]+" "+elem[1]+" "+"{:.3f}".format(elem[3])+"\n")
+
+with open("results_similarity.txt","w") as outfile:
+    for elem in wsim_sim_pairs:
+        outfile.write(elem[0]+" "+elem[1]+" "+"{:.3f}".format(elem[3])+"\n")
