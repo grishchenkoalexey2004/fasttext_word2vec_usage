@@ -1,6 +1,5 @@
 # Практическое задание номер 4
 
-
 ## Постановка задачи
 
 1. Использовать предобученную модель word2vec на основе fasttext, предрассчитанную на большом интернет-корпусе Common Crowl, для подсчета близостей слов в датасетах wordsim similarity и wordsim-relatedness.
@@ -15,7 +14,7 @@
 4. С помощью скрипта для подсчета корреляции Спирмена и посчитать корреляцию между списками (человеческим и от fasttext), сделать выводы
 
 ## Необходимые ресурсы
-1. Ссылка на фаил с векторами - https://fasttext.cc/docs/en/english-vectors.html
+1. Ссылка на фаил с векторами - https://fasttext.cc/docs/en/english-vectors.html (данная программа работает с crawl-300d-2M-subword.vec)
 2. Ссылка на wordsim датасеты - http://alfonseca.org/eng/research/wordsim353.html
 3. numpy
 4. scipy

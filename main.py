@@ -59,7 +59,7 @@ def add_fasttext_relatedness(pair_matr):
 
 
 # each array describing a pair contains 4 elems
-# word1 word2 relatedness from the file, cosine relatedness from wordtext
+# word1, word2, relatedness from the file, cosine relatedness from wordtext
 def calc_spearman(pair_matr):
     wordsim_rel_arr = list(map(lambda elem:elem[2],pair_matr))
     fasttext_rel_arr = list(map(lambda elem:elem[3],pair_matr))
