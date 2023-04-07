@@ -1,0 +1,78 @@
+\documentclass[14pt]{extreport}
+\usepackage{geometry}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage {extsizes}
+\usepackage{cmap} %кодировка pdf-документа
+\usepackage{textcomp} %%текстовые символы
+\usepackage{indentfirst}% корректировка отступов
+\usepackage{amssymb} %математические символы
+\usepackage{amsmath}% математические конструкции
+\usepackage{amsfonts}
+\usepackage{graphicx}% поддержка графики
+\DeclareUnicodeCharacter{2212}{-}
+
+\geometry{a4paper, left = 20mm, right = 20mm, top = 13mm, bottom = 15mm}
+  
+
+\title{\textbf{Отчёт по четвёртому практическому заданию курса "Автоматическое извлечение информации из текстов"} }
+\author{Выполнил: Алексей Грищенко, 209 группа}
+\date{}
+
+
+
+
+\begin{document}
+\maketitle
+
+\section*{Постановка задачи}
+\begin{enumerate}
+    \item Использовать предобученную на основе fasttext модель word2veс, предрассчитанную на большом интернет-корпусе Common Crowl, для подсчета косинусных близостей слов в датасетах wordsim-similarity и wordsim-relatedness (см. ссылку в следующем разделе).
+    \item Посчитать корреляцию полученных значений близости человеческими оценками из датасетов с помошью корреляции Спирмена.
+    \item Сделать вывод на основании полученных значений корреляции
+\end{enumerate}
+
+\section*{Ресурсы используемые в практической работе}
+Ссылка на практическую работу:\newline \textbf{https://github.com/grishchenkoalexey2004/fasttext\_word2vec\_usage}\newline
+\indentДатасеты \textbf{wordsim-similarity} и \textbf{wordsim-relatedness} содержащие в себе пары слов и человеческие оценки их лексической близости можно найти по ссылке: \textbf{http://alfonseca.org/eng/research/wordsim353.html}\newline
+\indentМодель word2vec под названием \textbf{crawl-300d-2M-subword}, обученную на основе fasttext можно найти по ссылке: \textbf{https://fasttext.cc/docs/en/english-vectors.html}\newline
+\indent Для подсчёта косинусной близости используются функции \textbf{dot} и \textbf{norm} из библиотеки \textbf{numpy}, отвечающие соответственно за вычисление скалярного произведения и нормы векторов.\newline
+\indent Коэффициент корреляции Спирмена считается с помощью функции \textbf{spearmanr} из модуля \textbf{numpy.stats}
+
+
+\section*{Результаты}
+Пары слов из фаилов wordsim\_similarity\_goldstandart.txt и \linebreak wordsim\_relatedness\_goldstandart.txt с посчитанной для них косинусной близостью можно найти в фаилах \textbf{results\_similarity.txt} и \textbf{results\_relatedness.txt}.
+
+\indent Корреляция Спирмена между человеческими оценками из wordsim\_similarity
+и wordsim\_relatedness и косинусными расстояниями равняется 0.835 и 0.64 соответственно.
+
+\section*{Выводы}
+Между человеческими оценками и косинусными расстояниями наблюдается сильная связь 
+(согласно шкале Чеддока). Результаты говорят о том, что из сходства контекстов, в которых два слова, с большой вероятностью следует лексическое сходство слов и наоборот. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
